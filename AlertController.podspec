@@ -1,6 +1,6 @@
 #
 # Be sure to run `pod lib lint AlertController.podspec' to ensure this is a
-# valid spec before submitting.
+# valid spec before submitting./Users/Marcel/Projekte/TestCocoaPods2/Podfile
 #
 # Any lines starting with a # are optional, but their use is encouraged
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Marcel Dittmann" => "marceldittmann@gmx.de" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/AlertController.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/Spriter/AlertController.git", :tag => "v0.1.0" }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '9.0'
