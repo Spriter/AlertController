@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="AlertController_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +17,74 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="bId-Rw-BAc">
+                                <rect key="frame" x="20" y="120" width="560" height="480"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ewJ-HP-fVo">
+                                <rect key="frame" x="20" y="20" width="560" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLh-fe-sHH">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Example 1"/>
+                                        <connections>
+                                            <action selector="exampleButton1Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YUH-ip-08e"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHm-rE-qDp">
+                                        <rect key="frame" x="0.0" y="25" width="560" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Example 2"/>
+                                        <connections>
+                                            <action selector="exampleButton2Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kDy-is-rZk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pL-o9-8TH">
+                                        <rect key="frame" x="0.0" y="50" width="560" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Example 3"/>
+                                        <connections>
+                                            <action selector="exampleButton3Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zGk-Rf-ODR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7SD-oF-kjA">
+                                        <rect key="frame" x="0.0" y="75" width="560" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Example 4"/>
+                                        <connections>
+                                            <action selector="exampleButton4Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8FB-dV-0Nr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="dOe-FC-ujW"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ewJ-HP-fVo" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="DEo-jy-e1n"/>
+                            <constraint firstItem="bId-Rw-BAc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="EqN-dY-GIN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bId-Rw-BAc" secondAttribute="trailing" id="MKB-85-WkE"/>
+                            <constraint firstItem="ewJ-HP-fVo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="PxO-rb-rGk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ewJ-HP-fVo" secondAttribute="trailing" id="aPC-xy-Nch"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="bId-Rw-BAc" secondAttribute="bottom" id="dBm-W0-g9F"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ewJ-HP-fVo" secondAttribute="bottom" id="hs7-Fz-1o0"/>
+                            <constraint firstItem="bId-Rw-BAc" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="x46-u1-nYk"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hs7-Fz-1o0"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="BG" width="2048" height="1366"/>
+    </resources>
 </document>
