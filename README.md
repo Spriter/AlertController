@@ -1,6 +1,9 @@
 # AlertController
 iOS AlertController
 
+<img src="http://i.imgur.com/uDlPwyJ.png" width="400">
+<img src="http://i.imgur.com/es3bVwu.png" width="400">
+
 ## Example
 ```swift
 
